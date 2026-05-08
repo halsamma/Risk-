@@ -7,6 +7,9 @@ export default defineConfig({
   resolve: {
     alias: { '@': path.resolve(__dirname, './src') },
   },
+  // GitHub Pages serves from /technology-risk-assessment/ in production
+  // In dev (no BASE_URL env) it serves from /
+  base: process.env.GITHUB_ACTIONS ? '/technology-risk-assessment/' : '/',
   server: {
     port: 5173,
     proxy: {
