@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(node \"C:\\\\Users\\\\hasan\\\\SOC pORJECT\\\\setup.js\")",
+      "Bash(npx tsc *)",
+      "Bash(node_modules/.bin/tsc --noEmit)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell($p = Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -Unique; if \\($p\\) { Stop-Process -Id $p -Force; Write-Host \"Killed PID $p on port 3001\" } else { Write-Host \"Port 3001 is free\" })",
+      "PowerShell($pids = Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue | Where-Object { $_.OwningProcess -gt 4 } | Select-Object -ExpandProperty OwningProcess -Unique; foreach \\($pid in $pids\\) { Stop-Process -Id $pid -Force -ErrorAction SilentlyContinue; Write-Host \"Killed PID $pid\" }; Start-Sleep -Milliseconds 800; $check = Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue; if \\($check\\) { Write-Host \"Port still in use\" } else { Write-Host \"Port 3001 is now free\" })",
+      "Bash(powershell -Command \"Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue\")",
+      "PowerShell($body = @{ name = \"Test\"; framework = \"soc2\"; impact_level = \"moderate\"; scope = @\\(\"security\"\\) } | ConvertTo-Json; try { Invoke-RestMethod -Uri \"http://localhost:3001/api/assessments\" -Method POST -Body $body -ContentType \"application/json\" -Headers @{Authorization = \"Bearer fake\"} } catch { $_.Exception.Response.StatusCode.value__; $_.ErrorDetails.Message })",
+      "Bash(powershell.exe -Command \"Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue\")",
+      "mcp__Claude_in_Chrome__browser_batch",
+      "mcp__Claude_in_Chrome__tabs_create_mcp",
+      "mcp__Claude_in_Chrome__javascript_tool"
+    ]
+  }
+}
