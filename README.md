@@ -1,6 +1,6 @@
-# SOC2 Compass — Multi-Framework Compliance Platform
+# Technology Risk Assessment Platform
 
-A full-stack compliance assessment platform for IT and GRC professionals. Assess your current state, track findings, and get step-by-step remediation guidance across multiple frameworks.
+A full-stack technology risk and compliance assessment platform for IT and GRC professionals. Assess your current state, track findings, and get step-by-step remediation guidance across multiple frameworks.
 
 ## Frameworks Supported
 

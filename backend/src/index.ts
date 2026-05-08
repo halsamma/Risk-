@@ -59,7 +59,7 @@ app.use((err: Error, _req: express.Request, res: express.Response, _next: expres
 // ── Start ─────────────────────────────────────────────────────────────────
 initializeDatabase();
 app.listen(env.PORT, () => {
-  logger.info(`SOC2 Compliance API running on http://localhost:${env.PORT}`);
+  logger.info(`Technology Risk Assessment API running on http://localhost:${env.PORT}`);
 });
 
 export default app;

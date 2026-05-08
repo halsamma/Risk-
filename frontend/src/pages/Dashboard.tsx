@@ -50,7 +50,7 @@ export default function Dashboard() {
             Welcome back, {user?.firstName}
           </h1>
           <p className="text-gray-400 mt-1 text-sm truncate">
-            {user?.companyName ? `${user.companyName} — ` : ''}Compliance Dashboard
+            {user?.companyName ? `${user.companyName} — ` : ''}Technology Risk Assessment
           </p>
         </div>
         <button

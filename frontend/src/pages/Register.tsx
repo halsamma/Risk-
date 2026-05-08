@@ -65,7 +65,7 @@ export default function Register() {
             <Shield className="w-6 h-6 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-white">Create your account</h1>
-          <p className="text-gray-400 text-sm mt-1">Start your SOC 2 compliance journey</p>
+          <p className="text-gray-400 text-sm mt-1">Start your technology risk assessment journey</p>
         </div>
 
         <div className="card">

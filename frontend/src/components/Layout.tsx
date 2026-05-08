@@ -26,8 +26,8 @@ export default function Layout() {
           <Shield className="w-4 h-4 text-white" />
         </div>
         <div>
-          <div className="text-sm font-bold text-white">SOC2 Compass</div>
-          <div className="text-xs text-gray-500">Compliance Platform</div>
+          <div className="text-sm font-bold text-white">TechRisk</div>
+          <div className="text-xs text-gray-500">Technology Risk Assessment</div>
         </div>
         {/* Close button — mobile only */}
         <button
@@ -124,7 +124,7 @@ export default function Layout() {
             <div className="w-6 h-6 bg-brand-600 rounded flex items-center justify-center">
               <Shield className="w-3.5 h-3.5 text-white" />
             </div>
-            <span className="text-sm font-bold text-white">SOC2 Compass</span>
+            <span className="text-sm font-bold text-white">TechRisk</span>
           </div>
         </header>
 

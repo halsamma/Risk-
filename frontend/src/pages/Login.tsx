@@ -41,8 +41,8 @@ export default function Login() {
           <div className="w-12 h-12 bg-brand-600 rounded-xl flex items-center justify-center mb-3">
             <Shield className="w-6 h-6 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-white">SOC2 Compass</h1>
-          <p className="text-gray-400 text-sm mt-1">Sign in to your compliance workspace</p>
+          <h1 className="text-2xl font-bold text-white">Technology Risk Assessment</h1>
+          <p className="text-gray-400 text-sm mt-1">Sign in to your risk assessment workspace</p>
         </div>
 
         <div className="card">

@@ -54,7 +54,7 @@ export default function Landing() {
             <div className="w-7 h-7 bg-brand-600 rounded-lg flex items-center justify-center">
               <Shield className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-white">SOC2 Compass</span>
+            <span className="font-bold text-white">TechRisk</span>
           </div>
           <div className="flex items-center gap-3">
             {user ? (
@@ -74,15 +74,15 @@ export default function Landing() {
       {/* ── Hero ── */}
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-12 text-center">
         <div className="inline-flex items-center gap-2 bg-brand-900/40 border border-brand-800/60 rounded-full px-4 py-1.5 text-xs text-brand-400 font-medium mb-6">
-          <Sparkles className="w-3 h-3" /> AI-powered SOC 2 compliance — from 10% to 95%
+          <Sparkles className="w-3 h-3" /> AI-powered · SOC 2 · FedRAMP · PCI DSS · PCI PIN · NIST AI RMF
         </div>
         <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
-          SOC 2 compliance,<br />
+          Technology Risk Assessment,<br />
           <span className="text-brand-400">without the guesswork</span>
         </h1>
         <p className="text-gray-400 text-base sm:text-lg mt-4 max-w-xl mx-auto">
-          Assess your current state across all 5 Trust Service Criteria, auto-generate findings,
-          and get AI-tailored remediation plans — step by step.
+          Assess your compliance posture across 5 frameworks, auto-generate findings,
+          and get step-by-step remediation plans — from 10% to 95% compliance.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8">
           {user ? (
@@ -189,7 +189,7 @@ export default function Landing() {
       <div className="border-t border-gray-800 bg-gray-900/40">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-white">Everything you need for SOC 2</h2>
+            <h2 className="text-2xl font-bold text-white">Everything you need for technology risk assessment</h2>
             <p className="text-gray-400 mt-2">Built for IT and GRC professionals who need results, not theory</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -212,9 +212,9 @@ export default function Landing() {
           <div className="w-14 h-14 bg-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <Shield className="w-7 h-7 text-white" />
           </div>
-          <h2 className="text-3xl font-bold text-white">Ready to close your compliance gaps?</h2>
+          <h2 className="text-3xl font-bold text-white">Ready to assess your technology risk?</h2>
           <p className="text-gray-400 mt-3 text-lg">
-            Create a free account and start your first assessment in under 5 minutes.
+            Create a free account and start your first risk assessment in under 5 minutes.
           </p>
           {user ? (
             <Link to="/dashboard" className="btn-primary mt-8 inline-flex items-center gap-2 text-base px-8 py-3">
@@ -233,9 +233,9 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between text-xs text-gray-600">
           <div className="flex items-center gap-2">
             <Shield className="w-3.5 h-3.5 text-brand-600" />
-            SOC2 Compass
+            Technology Risk Assessment
           </div>
-          <div>Covers all 5 Trust Service Criteria · 52 controls · OWASP-compliant</div>
+          <div>SOC 2 · FedRAMP · PCI DSS · PCI PIN · NIST AI RMF · OWASP-compliant</div>
         </div>
       </div>
     </div>
