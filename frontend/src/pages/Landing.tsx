@@ -64,6 +64,7 @@ export default function Landing() {
             ) : (
               <>
                 <Link to="/login" className="text-sm text-gray-400 hover:text-white transition-colors">Sign in</Link>
+                <Link to="/demo" className="text-sm text-gray-400 hover:text-white transition-colors">Try Demo</Link>
                 <Link to="/register" className="btn-primary text-sm">Get Started Free</Link>
               </>
             )}
@@ -91,14 +92,16 @@ export default function Landing() {
             </Link>
           ) : (
             <>
-              <Link to="/register" className="btn-primary text-base px-6 py-3 flex items-center gap-2 w-full sm:w-auto justify-center">
-                Start Free Assessment <ArrowRight className="w-4 h-4" />
+              <Link to="/demo" className="btn-primary text-base px-6 py-3 flex items-center gap-2 w-full sm:w-auto justify-center">
+                Try Demo — No Sign Up <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link to="/login" className="btn-secondary text-base px-6 py-3 w-full sm:w-auto text-center">Sign in</Link>
+              <Link to="/register" className="btn-secondary text-base px-6 py-3 w-full sm:w-auto text-center">
+                Create Free Account
+              </Link>
             </>
           )}
         </div>
-        <p className="text-xs text-gray-600 mt-3">No credit card · Works with your existing stack</p>
+        <p className="text-xs text-gray-600 mt-3">No credit card · Explore freely · Save when ready</p>
       </div>
 
       {/* ── Live Demo Preview ── */}
@@ -221,9 +224,14 @@ export default function Landing() {
               Go to Dashboard <ArrowRight className="w-4 h-4" />
             </Link>
           ) : (
-            <Link to="/register" className="btn-primary mt-8 inline-flex items-center gap-2 text-base px-8 py-3">
-              Start Free Assessment <ArrowRight className="w-4 h-4" />
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
+              <Link to="/demo" className="btn-primary inline-flex items-center gap-2 text-base px-8 py-3 justify-center">
+                Try Demo — No Sign Up <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link to="/register" className="btn-secondary inline-flex items-center gap-2 text-base px-8 py-3 justify-center">
+                Create Free Account
+              </Link>
+            </div>
           )}
         </div>
       </div>
