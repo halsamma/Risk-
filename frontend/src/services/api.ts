@@ -1,7 +1,11 @@
 import axios, { AxiosError } from 'axios';
 
+// In production VITE_API_URL is set to the backend URL (e.g. https://tra-api.onrender.com)
+// In development the Vite proxy forwards /api → localhost:3001
+const baseURL = import.meta.env.VITE_API_URL ?? '/api';
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL,
   headers: { 'Content-Type': 'application/json' },
   withCredentials: false,
 });
@@ -29,7 +33,7 @@ api.interceptors.response.use(
           try {
             const rt = localStorage.getItem('refreshToken');
             if (!rt) throw new Error('No refresh token');
-            const { data } = await axios.post('/api/auth/refresh', { refreshToken: rt });
+            const { data } = await axios.post(`${baseURL}/auth/refresh`, { refreshToken: rt });
             localStorage.setItem('accessToken', data.accessToken);
             localStorage.setItem('refreshToken', data.refreshToken);
           } finally {

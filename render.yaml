@@ -1,0 +1,44 @@
+services:
+  # ── Backend API ──────────────────────────────────────────────────────────────
+  - type: web
+    name: tra-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: DATABASE_PATH
+        value: /data/soc2.db
+      - key: UPLOAD_DIR
+        value: /data/uploads
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: ANTHROPIC_API_KEY
+        sync: false          # You set this manually in Render dashboard
+      - key: CORS_ORIGIN
+        sync: false          # Set to your frontend URL after deploy
+    disk:
+      name: tra-data
+      mountPath: /data
+      sizeGB: 1
+
+  # ── Frontend (static site) ───────────────────────────────────────────────────
+  - type: web
+    name: tra-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        sync: false          # Set to https://tra-api.onrender.com/api after backend deploys
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
