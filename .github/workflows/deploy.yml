@@ -36,7 +36,8 @@ jobs:
         working-directory: frontend
         env:
           VITE_API_URL: ${{ vars.VITE_API_URL }}
-        run: npm run build
+          GITHUB_ACTIONS: true
+        run: npx vite build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
